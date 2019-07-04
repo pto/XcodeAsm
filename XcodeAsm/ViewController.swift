@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.text = "The result is \(do_it(43, 7))"
+        output.text = "The result is \(do_it(0xAA, 0x33))"
     }
 
 }
