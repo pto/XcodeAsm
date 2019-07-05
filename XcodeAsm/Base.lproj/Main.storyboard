@@ -7,34 +7,150 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFMono-Regular.otf">
+            <string>SFMono-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XcodeAsm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XcodeAsm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rac-ii-5jg">
-                                <rect key="frame" x="20" y="44" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XRM-hZ-YAS">
+                                <rect key="frame" x="91" y="44" width="232.5" height="250.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VoP-hc-yf8">
+                                        <rect key="frame" x="0.0" y="0.0" width="232.5" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="a" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P12-1x-5jF">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0x00000000" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fo-jB-VHO">
+                                                <rect key="frame" x="50.5" y="0.0" width="182" height="36"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sO0-MU-wGV">
+                                        <rect key="frame" x="0.0" y="44" width="232.5" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="b" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-Vg-1Od">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0x00000000" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-h4-ei4">
+                                                <rect key="frame" x="50.5" y="0.0" width="182" height="36"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="26"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pSN-1A-Sm7">
+                                        <rect key="frame" x="0.0" y="88" width="232.5" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qo-i9-xtQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="232.5" height="44"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="Execute"/>
+                                                <connections>
+                                                    <action selector="execute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wh-PN-TVf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-8y-C5Y">
+                                        <rect key="frame" x="0.0" y="140" width="232.5" height="31.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="and" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-HL-7l0">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0x00000000" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rac-ii-5jg">
+                                                <rect key="frame" x="50.5" y="0.0" width="182" height="31.5"/>
+                                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jb3-T0-16Y">
+                                        <rect key="frame" x="0.0" y="179.5" width="232.5" height="31.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="or" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-qa-Nzp">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0x00000000" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2R3-hm-Vgo">
+                                                <rect key="frame" x="50.5" y="0.0" width="182" height="31.5"/>
+                                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="bottom" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-tn-2B1">
+                                        <rect key="frame" x="0.0" y="219" width="232.5" height="31.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="eor" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNK-oh-qgm">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0x00000000" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGm-fd-0AU">
+                                                <rect key="frame" x="50.5" y="0.0" width="182" height="31.5"/>
+                                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="26"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JGm-fd-0AU" firstAttribute="leading" secondItem="0Fo-jB-VHO" secondAttribute="leading" id="1EG-U1-9HL"/>
+                                    <constraint firstItem="Rac-ii-5jg" firstAttribute="leading" secondItem="0Fo-jB-VHO" secondAttribute="leading" id="3Hq-pb-DPw"/>
+                                    <constraint firstItem="aQL-qa-Nzp" firstAttribute="trailing" secondItem="P12-1x-5jF" secondAttribute="trailing" id="KON-Hz-E21"/>
+                                    <constraint firstItem="MNK-oh-qgm" firstAttribute="trailing" secondItem="P12-1x-5jF" secondAttribute="trailing" id="VrS-wb-zkP"/>
+                                    <constraint firstItem="Scj-Vg-1Od" firstAttribute="trailing" secondItem="P12-1x-5jF" secondAttribute="trailing" id="lAx-EQ-UDw"/>
+                                    <constraint firstItem="2R3-hm-Vgo" firstAttribute="leading" secondItem="0Fo-jB-VHO" secondAttribute="leading" id="nIX-NM-d9i"/>
+                                    <constraint firstItem="cNY-HL-7l0" firstAttribute="trailing" secondItem="P12-1x-5jF" secondAttribute="trailing" id="okg-ns-fK6"/>
+                                    <constraint firstItem="UWd-h4-ei4" firstAttribute="leading" secondItem="0Fo-jB-VHO" secondAttribute="leading" id="sJW-Vd-ril"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Rac-ii-5jg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7WX-Wb-ELv"/>
-                            <constraint firstItem="Rac-ii-5jg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7ZT-fX-5tI"/>
-                            <constraint firstItem="Rac-ii-5jg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xou-rb-z4k"/>
+                            <constraint firstItem="XRM-hZ-YAS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ayB-Ix-opZ"/>
+                            <constraint firstItem="XRM-hZ-YAS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="son-H7-uMu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="output" destination="Rac-ii-5jg" id="hok-Uq-ymV"/>
+                        <outlet property="a" destination="0Fo-jB-VHO" id="0Fw-qi-gZt"/>
+                        <outlet property="andOut" destination="Rac-ii-5jg" id="vGB-cz-Mev"/>
+                        <outlet property="b" destination="UWd-h4-ei4" id="Ijo-IA-qUZ"/>
+                        <outlet property="eorOut" destination="JGm-fd-0AU" id="dAP-th-Sl6"/>
+                        <outlet property="orOut" destination="2R3-hm-Vgo" id="qZc-MR-pZn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

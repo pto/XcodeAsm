@@ -9,6 +9,8 @@
 #ifndef XcodeAsm_Bridging_Header_h
 #define XcodeAsm_Bridging_Header_h
 
-long do_it(long a, long b);
+long and(long a, long b);
+long or(long a, long b);
+long eor(long a, long b);
 
 #endif /* XcodeAsm_Bridging_Header_h */

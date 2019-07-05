@@ -12,7 +12,8 @@
 		5558E5CA22CE8DA000F3A917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5558E5C822CE8DA000F3A917 /* Main.storyboard */; };
 		5558E5CC22CE8DA100F3A917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5558E5CB22CE8DA100F3A917 /* Assets.xcassets */; };
 		5558E5CF22CE8DA100F3A917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5558E5CD22CE8DA100F3A917 /* LaunchScreen.storyboard */; };
-		5558E5D722CE8DBC00F3A917 /* do_it.s in Sources */ = {isa = PBXBuildFile; fileRef = 5558E5D622CE8DBC00F3A917 /* do_it.s */; };
+		5558E5D722CE8DBC00F3A917 /* functions.s in Sources */ = {isa = PBXBuildFile; fileRef = 5558E5D622CE8DBC00F3A917 /* functions.s */; };
+		5558E5DA22CF89CF00F3A917 /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5558E5D922CF89CF00F3A917 /* SFMono-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +24,9 @@
 		5558E5CB22CE8DA100F3A917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5558E5CE22CE8DA100F3A917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5558E5D022CE8DA100F3A917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5558E5D622CE8DBC00F3A917 /* do_it.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = do_it.s; sourceTree = "<group>"; };
+		5558E5D622CE8DBC00F3A917 /* functions.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = functions.s; sourceTree = "<group>"; };
 		5558E5D822CE8E9100F3A917 /* XcodeAsm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcodeAsm-Bridging-Header.h"; sourceTree = "<group>"; };
+		5558E5D922CF89CF00F3A917 /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,12 @@
 				5558E5C422CE8DA000F3A917 /* AppDelegate.swift */,
 				5558E5C622CE8DA000F3A917 /* ViewController.swift */,
 				5558E5D822CE8E9100F3A917 /* XcodeAsm-Bridging-Header.h */,
-				5558E5D622CE8DBC00F3A917 /* do_it.s */,
+				5558E5D622CE8DBC00F3A917 /* functions.s */,
 				5558E5C822CE8DA000F3A917 /* Main.storyboard */,
 				5558E5CB22CE8DA100F3A917 /* Assets.xcassets */,
 				5558E5CD22CE8DA100F3A917 /* LaunchScreen.storyboard */,
 				5558E5D022CE8DA100F3A917 /* Info.plist */,
+				5558E5D922CF89CF00F3A917 /* SFMono-Regular.otf */,
 			);
 			path = XcodeAsm;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			files = (
 				5558E5CF22CE8DA100F3A917 /* LaunchScreen.storyboard in Resources */,
 				5558E5CC22CE8DA100F3A917 /* Assets.xcassets in Resources */,
+				5558E5DA22CF89CF00F3A917 /* SFMono-Regular.otf in Resources */,
 				5558E5CA22CE8DA000F3A917 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5558E5D722CE8DBC00F3A917 /* do_it.s in Sources */,
+				5558E5D722CE8DBC00F3A917 /* functions.s in Sources */,
 				5558E5C722CE8DA000F3A917 /* ViewController.swift in Sources */,
 				5558E5C522CE8DA000F3A917 /* AppDelegate.swift in Sources */,
 			);
