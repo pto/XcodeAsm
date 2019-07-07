@@ -14,6 +14,7 @@
 		5558E5CF22CE8DA100F3A917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5558E5CD22CE8DA100F3A917 /* LaunchScreen.storyboard */; };
 		5558E5D722CE8DBC00F3A917 /* functions.s in Sources */ = {isa = PBXBuildFile; fileRef = 5558E5D622CE8DBC00F3A917 /* functions.s */; };
 		5558E5DA22CF89CF00F3A917 /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5558E5D922CF89CF00F3A917 /* SFMono-Regular.otf */; };
+		5558E5DD22CFE07300F3A917 /* Demo.c in Sources */ = {isa = PBXBuildFile; fileRef = 5558E5DC22CFE02800F3A917 /* Demo.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		5558E5D622CE8DBC00F3A917 /* functions.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = functions.s; sourceTree = "<group>"; };
 		5558E5D822CE8E9100F3A917 /* XcodeAsm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcodeAsm-Bridging-Header.h"; sourceTree = "<group>"; };
 		5558E5D922CF89CF00F3A917 /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
+		5558E5DB22CFE02800F3A917 /* Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
+		5558E5DC22CFE02800F3A917 /* Demo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Demo.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				5558E5CD22CE8DA100F3A917 /* LaunchScreen.storyboard */,
 				5558E5D022CE8DA100F3A917 /* Info.plist */,
 				5558E5D922CF89CF00F3A917 /* SFMono-Regular.otf */,
+				5558E5DB22CFE02800F3A917 /* Demo.h */,
+				5558E5DC22CFE02800F3A917 /* Demo.c */,
 			);
 			path = XcodeAsm;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5558E5DD22CFE07300F3A917 /* Demo.c in Sources */,
 				5558E5D722CE8DBC00F3A917 /* functions.s in Sources */,
 				5558E5C722CE8DA000F3A917 /* ViewController.swift in Sources */,
 				5558E5C522CE8DA000F3A917 /* AppDelegate.swift in Sources */,

@@ -12,5 +12,7 @@
 long and(long a, long b);
 long or(long a, long b);
 long eor(long a, long b);
+long getByte(long a);
+long getDoubleWord(long a);
 
 #endif /* XcodeAsm_Bridging_Header_h */

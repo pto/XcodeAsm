@@ -1,5 +1,5 @@
 //
-//  do_it.s
+//  functions.s
 //  XcodeAsm
 //
 //  Created by Peter Olsen on 7/4/19.
@@ -8,44 +8,44 @@
 
 .text
 
-.global    _and
-.p2align    2
+.global _and
+.p2align 2
 _and:
-sub    sp, sp, 16
-str    x0, [sp, 8]
-str    x1, [sp]
-ldr    x0, [sp, 8]
-ldr    x1, [sp]
-
 and    x0, x0, x1
-
-add    sp, sp, #16
 ret
 
-.global    _or
-.p2align    2
+.global _or
+.p2align 2
 _or:
-sub    sp, sp, 16
-str    x0, [sp, 8]
-str    x1, [sp]
-ldr    x0, [sp, 8]
-ldr    x1, [sp]
-
 orr    x0, x0, x1
-
-add    sp, sp, #16
 ret
 
-.global    _eor
-.p2align    2
+.global _eor
+.p2align 2
 _eor:
-sub    sp, sp, 16
-str    x0, [sp, 8]
-str    x1, [sp]
-ldr    x0, [sp, 8]
-ldr    x1, [sp]
-
 eor    x0, x0, x1
-
-add    sp, sp, #16
 ret
+
+.global _getByte
+.p2align 2
+_getByte:
+adrp   x8, _str@PAGE
+add    x9, x8, _str@PAGEOFF
+add    x9, x9, x0    // first argument is the index
+eor    x0, x0, x0
+ldur   x0, [x9]
+ret
+_str:
+.asciz "hello, world!"
+
+.global _getDoubleWord
+.p2align 2
+_getDoubleWord:
+adrp    x8, _arr@PAGE
+add     x9, x8, _arr@PAGEOFF
+lsl     x0, x0, 3
+add     x9, x9, x0
+ldur    x0, [x9]
+ret
+_arr:
+.quad   1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024
