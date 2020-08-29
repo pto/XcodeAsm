@@ -29,11 +29,11 @@ ret
 .global _getByte
 .p2align 2
 _getByte:
-adrp   x8, _str@PAGE
-add    x9, x8, _str@PAGEOFF
+adrp   x9, _str@PAGE
+add    x9, x9, _str@PAGEOFF
 add    x9, x9, x0    // first argument is the index
 eor    x0, x0, x0
-ldur   x0, [x9]
+ldurb  w0, [x9]
 ret
 _str:
 .asciz "hello, world!"
@@ -41,8 +41,8 @@ _str:
 .global _getDoubleWord
 .p2align 2
 _getDoubleWord:
-adrp    x8, _arr@PAGE
-add     x9, x8, _arr@PAGEOFF
+adrp    x9, _arr@PAGE
+add     x9, x9, _arr@PAGEOFF
 lsl     x0, x0, 3
 add     x9, x9, x0
 ldur    x0, [x9]
